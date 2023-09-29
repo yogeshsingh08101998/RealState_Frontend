@@ -1,0 +1,17 @@
+<!-- navbar.component.html -->
+
+<div class="navbar">
+    <header>
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><span *ngIf="username">Welcome, {{ username }}!</span></li>
+                <li><button *ngIf="username" (click)="logout()">Logout</button></li>
+                <!-- <li><a href="#">Agents</a></li>
+                <li><a href="#">Contact</a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <!-- <span *ngIf="username">Welcome, {{ username }}!</span> -->
+  
+  </div>

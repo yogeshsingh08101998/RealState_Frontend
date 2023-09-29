@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="login()">
+
+      <p>
+        <mat-icon mat-list-icon>mail_outline</mat-icon>
+        <mat-form-field>
+          <input
+           
+            matInput
+            placeholder="Username"
+            formControlName="username"
+            required
+          />
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-icon mat-list-icon>mail_outline</mat-icon>
+        <mat-form-field>
+          <input
+            type="passord"
+            matInput
+            placeholder="Password"
+            formControlName="password"
+            required
+          />
+          <mat-error>
+            Please provide a valid password
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <button type="submit" mat-button color="primary">Login</button>
+      <p>
+        Don't have an account? <a href="/signup">Sign up</a>
+      </p>
+    </form>
+  </mat-card-content>
+</mat-card>
+
