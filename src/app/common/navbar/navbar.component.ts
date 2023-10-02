@@ -1,4 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 
 @Component({
@@ -7,23 +8,33 @@ import { AuthService } from 'src/app/auth.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  username:any;
+  username:string="";
+  user:any
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService,private route: Router,private cd: ChangeDetectorRef) {
     console.log("hi nav");
   }
 
   ngOnInit(){
-    // Set initial value
-   
-    this.username = this.authService.getLoggedInUsername();
+    debugger
+    this.route.events.subscribe((val: any) => {
+      if (val.url) {
+       
+         // this.user = localStorage.getItem("username");
+         this.user = this.authService.getLoggedInUsername();
+          this.username = this.user;
+          this.cd.detectChanges();
+      
+      }
+    });
 
-    // Subscribe to changes in the username
- 
   }
+
 
   logout() {
     debugger
     this.authService.logout();
+    window.location.reload();
+   
   }
 }
