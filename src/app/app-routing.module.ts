@@ -6,6 +6,7 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { AuthGuard } from './auth.guard';
 
 
+
 const routes: Routes = [
   { path: '',
    component: HomePageComponent

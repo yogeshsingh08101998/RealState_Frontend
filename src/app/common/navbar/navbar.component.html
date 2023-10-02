@@ -5,13 +5,13 @@
         <!-- Navigation menu -->
         <nav>
             <ul>
+                <li><a *ngIf="!username" href="/signup">SignUp</a></li>
+                <li><a *ngIf="!username" href="/login">Login</a></li>
                 <li><span *ngIf="username">Welcome, {{ username }}!</span></li>
                 <li><button *ngIf="username" (click)="logout()">Logout</button></li>
-                <!-- <li><a href="#">Agents</a></li>
-                <li><a href="#">Contact</a></li> -->
             </ul>
         </nav>
     </header>
-    <!-- <span *ngIf="username">Welcome, {{ username }}!</span> -->
+
   
   </div>

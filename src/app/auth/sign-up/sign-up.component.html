@@ -4,46 +4,46 @@
     <form [formGroup]="signupForm" (ngSubmit)="signup()">
       <mat-form-field>
         <label>FirstName</label>
-        <input matInput formControlName="firstname" [(ngModel)]="model.firstname" required>
+        <input matInput formControlName="firstname" required>
         <!-- <mat-error *ngIf="signupForm.get('username').hasError('required')">Username is required</mat-error> -->
       </mat-form-field>
 
       <mat-form-field>
         <label>Lastname</label>
-        <input matInput formControlName="lastname" [(ngModel)]="model.lastname" required>
+        <input matInput formControlName="lastname" required>
         <!-- <mat-error *ngIf="signupForm.get('username').hasError('required')">Username is required</mat-error> -->
       </mat-form-field>
 
       <mat-form-field>
         <label>UserName</label>
-        <input matInput formControlName="username" [(ngModel)]="model.username" required>
+        <input matInput formControlName="username"  required>
         <!-- <mat-error *ngIf="signupForm.get('username').hasError('required')">Username is required</mat-error> -->
       </mat-form-field>
 
       <mat-form-field>
         <label>Email</label>
-        <input matInput type="email" formControlName="email" [(ngModel)]="model.email" required>
+        <input matInput type="email" formControlName="email" required>
         <!-- <mat-error *ngIf="signupForm.get('email').hasError('required')">Email is required</mat-error>
         <mat-error *ngIf="signupForm.get('email').hasError('email')">Please enter a valid email address</mat-error> -->
       </mat-form-field>
      
       <mat-form-field>
         <label>Gender</label>
-        <select formControlName="gender" [(ngModel)]="model.gender" required>
+        <select formControlName="gender"  required>
           <option *ngFor="let gender of genders" [value]="gender.value">{{ gender.label }}</option>
         </select>
       </mat-form-field>
 
       <mat-form-field>
         <label>PhoneNumber</label>
-        <input matInput formControlName="phonenumber" [(ngModel)]="model.phonenumber" required>
+        <input matInput formControlName="phonenumber"  required>
         <!-- <mat-error *ngIf="signupForm.get('username').hasError('required')">Username is required</mat-error> -->
       </mat-form-field>
       
 
       <mat-form-field>
         <label>Address</label>
-        <textarea matInput formControlName="address" [(ngModel)]="model.address" required></textarea>
+        <textarea matInput formControlName="address"  required></textarea>
         <!-- <mat-error *ngIf="signupForm.get('address').hasError('required')">Address is required</mat-error> -->
       </mat-form-field>
 

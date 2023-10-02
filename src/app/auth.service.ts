@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private isLoggedIn = false;
+  public isLoggedIn = false;
   private username: any;
   private token: any;
   constructor()
@@ -38,6 +39,7 @@ export class AuthService {
   }
 
   getLoggedInUsername() {
+  
     return this.username;
   }
 
